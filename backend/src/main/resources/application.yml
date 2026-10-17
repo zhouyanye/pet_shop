@@ -1,0 +1,39 @@
+# 端口配置
+server:
+  port: 8082
+  servlet:
+    application-display-name:
+
+
+spring:
+  #头像上传最大最小
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/pet_shop?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+# mybatis-plus配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
+
+#jwt配置
+jwt:
+  secret: ${JWT_SECRET:yanleaf-petshop-secret-key-2026-abc123456-change-me}
+  expire-ms: 604800000
+
+
+
+# 自定义配置 头像配置
+file:
+  upload-dir: G:/pet-shop-uploads
+  access-prefix: http://localhost:8082
+
+
+

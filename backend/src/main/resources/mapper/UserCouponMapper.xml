@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanleaf.mapper.UserCouponMapper">
+
+    <resultMap id="BaseResultMap" type="com.yanleaf.domain.UserCoupon">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="couponId" column="coupon_id" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="usedOrderId" column="used_order_id" jdbcType="BIGINT"/>
+            <result property="receivedAt" column="received_at" jdbcType="TIMESTAMP"/>
+            <result property="usedAt" column="used_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,coupon_id,
+        status,used_order_id,received_at,
+        used_at
+    </sql>
+</mapper>

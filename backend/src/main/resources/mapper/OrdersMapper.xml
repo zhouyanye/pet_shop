@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanleaf.mapper.OrdersMapper">
+
+    <resultMap id="BaseResultMap" type="com.yanleaf.domain.Orders">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="orderNo" column="order_no" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="addressId" column="address_id" jdbcType="BIGINT"/>
+            <result property="totalAmount" column="total_amount" jdbcType="DECIMAL"/>
+            <result property="productAmount" column="product_amount" jdbcType="DECIMAL"/>
+            <result property="shippingFee" column="shipping_fee" jdbcType="DECIMAL"/>
+            <result property="discountAmount" column="discount_amount" jdbcType="DECIMAL"/>
+            <result property="payMethod" column="pay_method" jdbcType="TINYINT"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="paidAt" column="paid_at" jdbcType="TIMESTAMP"/>
+            <result property="shippedAt" column="shipped_at" jdbcType="TIMESTAMP"/>
+            <result property="receivedAt" column="received_at" jdbcType="TIMESTAMP"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,order_no,user_id,
+        address_id,total_amount,product_amount,
+        shipping_fee,discount_amount,pay_method,
+        status,remark,paid_at,
+        shipped_at,received_at,created_at,
+        updated_at
+    </sql>
+</mapper>
